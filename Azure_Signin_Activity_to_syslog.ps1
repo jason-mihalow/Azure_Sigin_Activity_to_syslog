@@ -39,7 +39,7 @@ $dstserver = ""
 $dstport = ""
 
 #get the current path
-$current_path = convert-path .
+$current_path = Split-Path -Parent $PSCommandPath
 
 #create TCP socket connection to logging server using .NET
 $tcpConnection = New-Object System.Net.Sockets.TcpClient($dstserver, $dstport)
